@@ -3,14 +3,8 @@ import { shallowMount } from "@vue/test-utils";
 
 describe("test.vue", () => {
   it("catch exception", () => {
-    let passed = false;
-    expect.assertions(1);
-    try {
+    expect(() =>{
       shallowMount(NonAsync);
-    } catch (ex) {
-      expect(ex.message).toBe("test");
-      passed = true;
-    }
-    expect(passed).toBe(true);
+    }).toThrow('test');
   });
 });
