@@ -1,7 +1,7 @@
 import Async from "@/components/Async.vue";
 import { shallowMount } from "@vue/test-utils";
 
-describe("test.vue", () => {
+describe("Async.vue", () => {
   it("catch exception", async done => {
     let passed = false;
     expect.assertions(1);
